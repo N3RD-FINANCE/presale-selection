@@ -1,0 +1,27 @@
+{
+  "name": "presale-selection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://nerd.finance@github.com/N3RD-FINANCE/presale-selection.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/N3RD-FINANCE/presale-selection/issues"
+  },
+  "homepage": "https://github.com/N3RD-FINANCE/presale-selection#readme",
+  "dependencies": {
+    "async-await-foreach": "^1.0.4",
+    "async-for-each": "^1.0.1",
+    "bignumber.js": "^9.0.1",
+    "dotenv": "^8.2.0",
+    "random-seed": "^0.3.0",
+    "web3": "^1.3.1"
+  }
+}
