@@ -2,11 +2,11 @@ require('dotenv').config();
 const { BADNAME } = require('dns');
 var fs = require('fs');
 var Web3 = require('web3');
-var abi = require('./abi');
+var abi = require('../abi');
 var BN = require('bignumber.js');
 const asyncForEach = require("async-for-each");
 
-const web3 = new Web3(new Web3.providers.HttpProvider(`https://stoic-dijkstra:omen-dugout-ditto-tartly-lyrics-ashy@nd-676-121-911.p2pify.com`));
+const web3 = new Web3(new Web3.providers.HttpProvider(process.env.WEB3_URL));
 let nerdVault = null;
 let stakingPool = null;
 let nerd = null;
