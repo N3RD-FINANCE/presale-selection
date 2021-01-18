@@ -46,8 +46,13 @@ async function howMuchNerdFarmed(addr) {
         //stake before
         let reminingLP = await nerdVault.methods.getRemainingLP(i, addr).call();
         let nerdInVault = new BN(reminingLP).multipliedBy(new BN(nerdInPairs[i])).dividedBy(new BN(lpSupplys[i])).dividedBy(new BN('1e18')).toFixed(4);
-        if (nerdInVault != '0.0000')
-            userTotalFarmed[addr] = nerdInVault;
+        if (nerdInVault != '0.0000') {
+            if (!userTotalFarmed[addr]) {
+                userTotalFarmed[addr] = nerdInVault;
+            } else {
+                userTotalFarmed[addr] = new BN(userTotalFarmed[addr]).plus(new BN(nerdInVault)).toFixed(4);
+            }
+        }
     }
 
 }
